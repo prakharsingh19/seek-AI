@@ -10,6 +10,8 @@ This was a group project done as part of the **Software Engineering course at II
 - **Abhi**: Built some frontend components that connected to the API.
 
 > 🛠️ I handled a significant part of the overall architecture and development.
+> 🔗 Check my contributions on the project: [https://github.com/21f1006728/seek-AI](https://github.com/21f1006728/seek-AI)
+
 
 ## Tech Stack
 
