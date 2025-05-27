@@ -1,6 +1,15 @@
 # Seek-AI
 
-A web application built with Vue.js (frontend) and Flask (backend) to deliver an interactive learning platform with AI-driven features.
+A web application built with Vue.js (frontend) and Flask (backend) to deliver an interactive learning platform with AI-driven features.  
+This was a group project done as part of the **Software Engineering course at IIT Madras**.
+
+## 👥 Team Contributions
+
+- **My Role (21f1006728)**: Led the development with major contributions to **database design**, **frontend setup**, and integration of **GenAI features using Retrieval-Augmented Generation (RAG)**.
+- **Ruhil**: Worked on several frontend pages and was responsible for designing and implementing the **entire Flask API layer**.
+- **Abhi**: Built some frontend components that connected to the API.
+
+> 🛠️ I handled a significant part of the overall architecture and development.
 
 ## Tech Stack
 
