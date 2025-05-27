@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seek.AI - Transform Your Learning</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        /* General Styles */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #A02334;
+            padding: 8px 20px;
+        }
+
+        .navbar-logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: url('../public/banner-bg.jpg') no-repeat center center/cover;
+            color: rgb(71, 70, 70);
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-top: 8px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 30px 15px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.03);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #A02334;
+            margin-bottom: 10px;
+        }
+
+        /* Explore Courses Button */
+        .explore-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .explore-container .btn {
+            font-size: 1.2rem;
+            padding: 10px 25px;
+        }
+
+        /* Logo Section */
+        .logo-section {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .logo-section img {
+            width: 150px;
+            height: auto;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #A02334;
+            color: white;
+        }
+
+        .cta-section .btn {
+            font-size: 1rem;
+            padding: 8px 18px;
+            margin: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="index.html">
+                <img src="../public/logo.png" alt="seek.AI" class="navbar-logo">
+            </a>
+            <div class="d-flex align-items-center">
+                <a class="nav-link me-2" href="login.html">Login</a>
+                <a class="nav-link me-2" href="register.html">Register</a>
+                <a class="btn btn-light btn-sm" href="courses.html">Go to Courses</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to seek.AI</h1>
+        <p>Your AI-powered personal learning assistant</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features container">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="bi bi-robot"></i>
+                    <h5>Personal AI Assistant</h5>
+                    <p>Get real-time AI support tailored to your study needs.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="bi bi-graph-up"></i>
+                    <h5>Track Learning Progress</h5>
+                    <p>Monitor your study habits and optimize your schedule.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="bi bi-person-check"></i>
+                    <h5>Interactive AI Study Plans</h5>
+                    <p>Get AI-generated personalized study recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Courses Button Centered -->
+    <div class="explore-container">
+        <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+    </div>
+
+    <!-- Logo Section Above CTA -->
+    <div class="logo-section">
+        <img src="../public/logo.png" alt="seek.AI Logo">
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Join seek.AI Today</h2>
+        <p>Experience the future of learning with AI-powered insights.</p>
+        <a href="register.html" class="btn btn-light">Sign Up Now</a>
+        <a href="courses.html" class="btn btn-outline-light">Explore Courses</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 seek.AI | All Rights Reserved
+    </footer>
+
+</body>
+
+</html>

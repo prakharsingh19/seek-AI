@@ -1,0 +1,109 @@
+curl -X POST http://localhost:5000/login \
+     -H "Content-Type: application/json" \
+     -d '{"email": "admin@seek.ai", "password": "pass"}'
+
+
+curl -X POST http://localhost:5000/login \
+     -H "Content-Type: application/json" \
+     -d '{"email": "stu1@seek.ai", "password": "pass"}'
+
+
+
+curl -X POST http://localhost:5000/register \
+     -H "Content-Type: application/json" \
+     -d '{
+          "email": "stu1@seek.ai",
+          "password": "pass",
+          "role": "student",
+          "first_name": "StudentOne",
+          "last_name": "SeekAI",
+          "contact_info": "1234567890"
+     }'
+
+
+curl -X POST http://localhost:5000/register \
+     -H "Content-Type: application/json" \
+     -d '{
+          "email": "stu2@seek.ai",
+          "password": "stu2password",
+          "role": "student",
+          "first_name": "StudentTwo",
+          "last_name": "SeekAI",
+          "contact_info": "0987654321"
+     }'
+    
+curl -X POST http://localhost:5000/register \
+     -H "Content-Type: application/json" \
+     -d '{
+          "email": "inst1@seek.ai",
+          "password": "pass",
+          "role": "instructor",
+          "name": "InstructorOne SeekAI",
+          "experience": "5",
+          "qualification": "PhD in AI",
+          "contact_info": "1122334455"
+     }'
+
+MISSING WALA
+
+curl -X POST http://localhost:5000/register \
+     -H "Content-Type: application/json" \
+     -d '{
+          "password": "missingemailpassword",
+          "role": "student",
+          "first_name": "NoEmail",
+          "last_name": "Student",
+          "contact_info": "0000000000"
+     }'
+
+curl -X POST http://localhost:5000/register \
+     -H "Content-Type: application/json" \
+     -d '{
+          "email": "nopassword@seek.ai",
+          "role": "student",
+          "first_name": "NoPass",
+          "last_name": "Student",
+          "contact_info": "0000000000"
+     }'
+
+
+role
+
+curl -X POST http://localhost:5000/register \
+     -H "Content-Type: application/json" \
+     -d '{
+          "email": "invalidrole@seek.ai",
+          "password": "invalidpass",
+          "role": "admin",
+          "name": "Invalid Role",
+          "contact_info": "1111111111"
+     }'
+
+
+dupli mail  
+
+curl -X POST http://localhost:5000/register \
+     -H "Content-Type: application/json" \
+     -d '{
+          "email": "stu1@seek.ai",
+          "password": "newpassword",
+          "role": "student",
+          "first_name": "Duplicate",
+          "last_name": "Student",
+          "contact_info": "2222222222"
+     }'
+
+
+courses
+
+curl -X POST http://127.0.0.1:5000/api/course \
+-H "Content-Type: application/json" \
+-H "Authentication-Token: eyJ2ZXIiOiI1IiwidWlkIjoiYWRtaW5Ac2Vlay5haSIsImZzX3BhYSI6MTc0MjgzMjc2My4yOTM3MTMzLCJleHAiOjB9.Z-GEew.3gniF7oSP_G62Xt4rgfabxYHHbk" \
+-d '{
+    "name": "Deep Learning",
+    "desc": "Introduction to Neural Networks and Deep Learning",
+    "term_name": "2025t3",
+    "course_code": "DL101"
+}'
+
+eyJ2ZXIiOiI1IiwidWlkIjoiYzY5YjUwMGYzM2ExNDVjMjk1YjY3MGE4MDU2NzA3ZWUiLCJmc19wYWEiOjE3NDIzMTE5MDUuNjQ5NDI3MiwiZXhwIjowfQ.Z9mR4Q.T-YHxBLCZ2yVHrku4xlRa1m1c_U

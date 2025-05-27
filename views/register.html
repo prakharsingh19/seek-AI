@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seek.AI - Register</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Centered Container */
+        .register-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 80px auto;
+            background: #A02334; /* Ribbon color */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: white;
+        }
+
+        /* Logo */
+        .logo-container img {
+            width: 120px;
+            margin-bottom: 15px;
+        }
+
+        /* Form Styling */
+        .form-control {
+            border-radius: 5px;
+            border: none;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .btn-register {
+            background-color: white;
+            color: #A02334;
+            width: 100%;
+        }
+
+        .btn-register:hover {
+            background-color: #ddd;
+        }
+
+        /* Development Mode Buttons */
+        .dev-buttons {
+            margin-top: 20px;
+        }
+
+        .dev-buttons .btn {
+            width: 100%;
+            margin-bottom: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+        }
+
+        .dev-buttons .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .dev-warning {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Register Box -->
+    <div class="register-container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="../public/logo.png" alt="seek.AI Logo">
+        </div>
+
+        <h3>Join seek.AI</h3>
+        <p>Create an account and start your AI-powered learning journey.</p>
+
+        <!-- Register Form -->
+        <form>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email Address" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn btn-register">Sign Up</button>
+        </form>
+
+        <!-- Development Mode Dummy Buttons -->
+        <div class="dev-buttons">
+            <p class="dev-warning">For development only: Bypass registration and test different pages.</p>
+            <a href="courses.html" class="btn">Go to Student Page (Without Register)</a>
+            <a href="adminDashboard.html" class="btn">Go to Admin Page (Without Register)</a>
+            <a href="instDashboard.html" class="btn">Go to Instructor Page (Without Register)</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

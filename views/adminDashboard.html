@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand" href="home.html">
+                <img src="../public/logo.png" alt="seek.AI" class="navbar-logo">
+            </a>
+
+            <div class="d-flex align-items-center">
+                <span class="nav-link me-3">Admin</span>
+                <a class="nav-link" href="profile.html">
+                    <i class="bi bi-person-circle fs-3"></i>
+                </a>
+
+                <!-- Sidebar Toggle Button -->
+                <button id="sidebarToggle" class="sidebar-menu-btn">
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar (Right) -->
+    <div id="sidebar" class="sidebar">
+        <button id="closeSidebar" class="close-btn">&times;</button>
+        <ul class="sidebar-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="courses.html">My Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+        <button class="btn btn-danger logout-btn">Logout</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <!-- Left Sidebar: Admin Controls -->
+            <div class="col-md-3 bg-light p-3 vh-100 overflow-auto">
+                <h5 class="mb-3">Admin Panel</h5>
+                <input type="text" class="form-control mb-3" placeholder="Search Courses...">
+                <button class="btn btn-primary w-100 mb-3">Filter</button>
+                <button class="btn btn-success w-100 mb-3">Add New Course</button>
+                <h3>Active Courses list</h3>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center course-item"
+                        data-title="English-2 (Rajesh)" data-description="Advanced English grammar and writing skills.">
+                        English-2 (Rajesh)
+                        <span class="badge bg-primary rounded-pill">10 Lectures</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center course-item"
+                        data-title="DBMS (Das)" data-description="Database Management System concepts and SQL.">
+                        DBMS (Das)
+                        <span class="badge bg-primary rounded-pill">12 Lectures</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center course-item"
+                        data-title="Python (Mohan)" data-description="Python programming for beginners and advanced learners.">
+                        Python (Mohan)
+                        <span class="badge bg-primary rounded-pill">8 Lectures</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center course-item"
+                        data-title="Bollywood Physics (SRK)" data-description="Physics concepts explained using Bollywood action scenes!">
+                        Bollywood Physics (SRK)
+                        <span class="badge bg-primary rounded-pill">6 Lectures</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center course-item"
+                        data-title="Machine Learning (Ranveer)" data-description="Introduction to ML with Bollywood-inspired examples.">
+                        Machine Learning (Ranveer)
+                        <span class="badge bg-primary rounded-pill">15 Lectures</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center course-item"
+                        data-title="Data Science (Aamir)" data-description="Data Science case studies inspired by Bollywood analytics.">
+                        Data Science (Aamir)
+                        <span class="badge bg-primary rounded-pill">18 Lectures</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center course-item"
+                        data-title="AI & Bollywood (Salman)" data-description="How AI is transforming Bollywood movies and VFX.">
+                        AI & Bollywood (Salman)
+                        <span class="badge bg-primary rounded-pill">9 Lectures</span>
+                    </li>
+                </ul>
+                
+            </div>
+
+            <!-- Main Content: Course Details -->
+
+
+            <div class="col-md-9 p-3">
+                <h4>Engagement</h4>
+                <!-- Top Analytics Section -->
+                <div class="admin-charts">
+                    <div class="admin-chart-card">
+                        <img src="https://th.bing.com/th/id/OIP.fU2-fBUpp4KTULWTykJhTQHaFk?rs=1&pid=ImgDetMain" alt="Chart 1">
+                    </div>
+                    <div class="admin-chart-card">
+                        <img src="https://th.bing.com/th/id/R.62591c979a1ff0a5a64d9927e4b2d192?rik=uQ8pojdaUEzttg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-pie-chart--2028.png&ehk=j1o4PxoKBNBzEBoPiiArkwZhE7SFFuxvmB2TGdErpts%3d&risl=&pid=ImgRaw&r=0" alt="Chart 2">
+                    </div>
+                    <div class="admin-chart-card">
+                        <img src="https://th.bing.com/th/id/OIP.WlT_OrahCVCArQrsJeOG2gHaFW?rs=1&pid=ImgDetMain" alt="Chart 3">
+                    </div>
+                </div>
+
+                <h4 class="mb-3">Course Details</h4>
+                <div class="card p-3">
+                    <h5>Selected Course: Python Programming</h5>
+                    <p><strong>Instructor:</strong> John Doe</p>
+                    <p><strong>Duration:</strong> 10 Weeks</p>
+                    <p><strong>Enrolled Students:</strong> 150</p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-warning">Modify</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+
+                <!-- Statistical Overview -->
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="card admin-stat-card p-3">
+                            <h5>Total Students</h5>
+                            <p class="fs-3">1,200</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card admin-stat-card p-3">
+                            <h5>Active Courses</h5>
+                            <p class="fs-3">25</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card admin-stat-card p-3">
+                            <h5>Pending Approvals</h5>
+                            <p class="fs-3">5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap & Custom JS -->
+    <script>
+        document.querySelectorAll(".course-item").forEach(item => {
+            item.addEventListener("click", function () {
+                let courseTitle = this.getAttribute("data-title");
+                let courseDescription = this.getAttribute("data-description");
+    
+                document.getElementById("courseTitle").innerText = courseTitle;
+                document.getElementById("courseDescription").innerText = courseDescription;
+            });
+        });
+    </script>
+    <!-- Bootstrap & Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../public/script.js"></script>
+
+</body>
+
+</html>

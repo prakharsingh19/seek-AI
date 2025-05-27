@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #A02334;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar .admin-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .navbar .admin-dropdown img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .navbar .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .navbar .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .navbar .admin-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main layout styles */
+        .main-layout {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f9;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .course-list li {
+            padding: 10px;
+            background-color: #fff;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .course-list li:hover {
+            background-color: #e0e0e0;
+        }
+
+        .sidebar-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sidebar button {
+            width: 48%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .sidebar button:hover {
+            background-color: #ddd;
+        }
+
+        /* Main content styles */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .course-details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .edit-course {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .edit-course:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Ed-AI</div>
+        <div class="admin-dropdown">
+            <img src="https://via.placeholder.com/30" alt="Admin">
+            <div class="dropdown-content">
+                <a href="#">My Profile</a>
+                <a href="home.html">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <h3>Course List</h3>
+            <ul class="course-list">
+                <li onclick="selectCourse('Course 1')">Course 1 - Level: Beginner, Term: Fall</li>
+                <li onclick="selectCourse('Course 2')">Course 2 - Level: Intermediate, Term: Spring</li>
+                <li onclick="selectCourse('Course 3')">Course 3 - Level: Advanced, Term: Winter</li>
+            </ul>
+            <div class="sidebar-buttons">
+                <button onclick="filterCourses()">Filter</button>
+                <button onclick="searchCourses()">Search</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="course-details" id="course-details">
+                <h2>Select a course to view details</h2>
+            </div>
+            <button class="edit-course">Edit Course</button>
+        </div>
+    </div>
+
+    <script>
+        function selectCourse(courseName) {
+            const courseDetails = document.getElementById('course-details');
+            courseDetails.innerHTML = `
+                <h2>${courseName}</h2>
+                <p>Engagement Metrics: [Placeholder for metrics]</p>
+                <p>AI Driven Recommendations: [Placeholder for recommendations]</p>
+            `;
+        }
+
+        function filterCourses() {
+            alert('Filter functionality to be implemented.');
+        }
+
+        function searchCourses() {
+            alert('Search functionality to be implemented.');
+        }
+    </script>
+</body>
+</html>

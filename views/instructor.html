@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #A02334;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar .inst-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .navbar .inst-dropdown img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .navbar .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .navbar .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .navbar .inst-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main layout styles */
+        .main-layout {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f9;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .student-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .student-list li {
+            padding: 10px;
+            background-color: #fff;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .student-list li:hover {
+            background-color: #e0e0e0;
+        }
+
+        .sidebar-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sidebar button {
+            width: 48%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .sidebar button:hover {
+            background-color: #ddd;
+        }
+
+        /* Main content styles */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .student-details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Ed-AI</div>
+        <div class="student-dropdown">
+            <img src="https://via.placeholder.com/30" alt="Instructor">
+            <div class="dropdown-content">
+                <a href="#">My Profile</a>
+                <a href="home.html">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <h3>Students</h3>
+            <ul class="student-list">
+                <li onclick="selectStudent('Student 1')">Student 1 - Level: Below Average</li>
+                <li onclick="selectStudent('Student 2')">Student 2 - Level: Above Average</li>
+                <li onclick="selectStudent('Student 3')">Student 3 - Level: Excellent</li>
+            </ul>
+            <div class="sidebar-buttons">
+                <button onclick="filterStudent()">Filter</button>
+                <button onclick="searchStudent()">Search</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="student-details" id="student-details">
+                <h2>Select Student to view details</h2>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function selectStudent(Student_rollno) {
+            const studentDetails = document.getElementById('student-details');
+            studentDetails.innerHTML = `
+                <h2>${Student_rollno}</h2>
+                <p>Schedule Session: [Placeholder for metrics]</p>
+                <p>Performance Trends: [Placeholder for metrics]</p>
+                <p>Missed Questions: [Placeholder for metrics]</p>
+                <p>AI Driven Recommendations: [Placeholder for recommendations]</p>
+            `;
+        }
+
+        function filterStudent() {
+            alert('Filter functionality to be implemented.');
+        }
+
+        function searchStudent() {
+            alert('Search functionality to be implemented.');
+        }
+    </script>
+    
+     
+</body>
+</html>

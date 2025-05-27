@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <!-- Bootstrap CSS & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand" href="home.html">
+                <img src="../public/logo.png" alt="seek.AI" class="navbar-logo">
+            </a>
+
+            <div class="d-flex align-items-center">
+                <span class="nav-link me-3">Student Name</span>
+                <a class="nav-link" href="profile.html">
+                    <i class="bi bi-person-circle fs-3"></i>
+                </a>
+
+                <!-- Sidebar Toggle Button -->
+                <button id="sidebarToggle" class="sidebar-menu-btn">
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <button id="closeSidebar" class="close-btn">&times;</button>
+        <ul class="sidebar-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="courses.html">My Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+        <button class="btn btn-danger logout-btn">Logout</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <h1 class="mb-3 text-center">My Profile</h1>
+
+        <!-- Student Profile Section -->
+        <div class="card mb-3 p-3 d-flex flex-row align-items-center">
+            <img src="https://img.freepik.com/premium-photo/male-female-profile-avatar-user-avatars-gender-icons_1020867-74966.jpg"
+                width="120" class="rounded-circle me-3" alt="Student Photo">
+            <div>
+                <h3 class="mb-1">Student Name</h3>
+                <p class="text-muted">Level: Degree/Foundation/Diploma</p>
+                <p class="text-muted">DOB: July 13, 2099</p>
+            </div>
+        </div>
+
+        <!-- Badges Section -->
+        <div class="card mb-3 p-3">
+            <h5 class="mb-3">Achievements & Badges</h5>
+            <div class="d-flex flex-wrap justify-content-start gap-2">
+                <span class="badge bg-primary p-2">Python Expert</span>
+                <span class="badge bg-success p-2">Full Stack Developer</span>
+                <span class="badge bg-warning text-dark p-2">AI Enthusiast</span>
+                <span class="badge bg-danger p-2">Data Science</span>
+                <span class="badge bg-info text-dark p-2">Machine Learning</span>
+                <span class="badge bg-secondary p-2">C++ Pro</span>
+                <span class="badge bg-dark p-2">Open Source Contributor</span>
+                <span class="badge bg-light text-dark p-2">Cyber Security</span>
+                <span class="badge bg-primary p-2">Blockchain Developer</span>
+                <span class="badge bg-success p-2">Cloud Computing</span>
+            </div>
+        </div>
+
+        <!-- Collapsible Sections -->
+        <div class="accordion" id="profileAccordion">
+
+            <!-- Projects Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#projectsSection">
+                        Projects
+                    </button>
+                </h2>
+                <div id="projectsSection" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <p>Project 1: XYZ</p>
+                        <p>Project 2: ABC</p>
+                        <button class="btn btn-primary">Edit</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!-- Address Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#addressSection">
+                        Address
+                    </button>
+                </h2>
+                <div id="addressSection" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>123, Street Name, City, State</p>
+                        <button class="btn btn-primary">Edit</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!-- Personal Links Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#linksSection">
+                        Personal Links
+                    </button>
+                </h2>
+                <div id="linksSection" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>LinkedIn: <a href="#">linkedin.com/yourprofile</a></p>
+                        <p>GitHub: <a href="#">github.com/yourprofile</a></p>
+                        <button class="btn btn-primary">Edit</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap & Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../public/script.js"></script>
+</body>
+
+</html>
